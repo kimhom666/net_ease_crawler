@@ -2,7 +2,6 @@ from Cryptodome.Cipher import AES
 import base64
 import requests
 import json
-from fake_useragent import UserAgent
 from lxml import etree
 import re
 
@@ -12,7 +11,7 @@ class NetEaseSongCrawler:
 
         self.headers = {
             'authority': 'music.163.com',
-            'user-agent': UserAgent().random,
+            'user-agent': "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36",
             'content-type': 'application/x-www-form-urlencoded',
             'accept': '*/*',
             'origin': 'https://music.163.com',
